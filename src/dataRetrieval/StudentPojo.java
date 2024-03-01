@@ -1,6 +1,6 @@
 package dataRetrieval;
 
-public class StudentPojo implements Cloneable {
+public class StudentPojo {
 	
 	
 	private String name;
@@ -56,14 +56,8 @@ public class StudentPojo implements Cloneable {
 		this.needsSpecialAccomodation = needsSpecialAccomodation;
 	}
 
-
-	@Override
-	 public Object clone() throws CloneNotSupportedException {
-	 return super.clone();
-	 }
-	
-	//@Override
-	public boolean isEquals(StudentPojo student1, StudentPojo copy) {
+		
+		public boolean isEquals(StudentPojo student1, StudentPojo copy) {
 		if((student1.getName()==copy.getName())&&(student1.getEnrollmentNo()==copy.getEnrollmentNo())){
 			return true;
 		}
